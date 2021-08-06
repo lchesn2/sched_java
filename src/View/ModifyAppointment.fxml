@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="617.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ModifyAppointmentController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="627.0" prefWidth="449.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.1388888888888889" layoutX="139.0" layoutY="166.0" orientation="VERTICAL" prefHeight="578.0" prefWidth="437.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #f8f8ff;">
+                     <children>
+                        <StackPane layoutX="119.0" layoutY="-34.0" prefHeight="81.0" prefWidth="437.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label text="Update Appointment" textFill="SLATEGRAY">
+                                 <font>
+                                    <Font name="System Italic" size="31.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <GridPane layoutX="192.0" layoutY="176.0" prefHeight="492.0" prefWidth="435.0" style="-fx-background-color: #F8F8FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <StackPane prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Appointment ID" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <TextField fx:id="idTextField" disable="true" editable="false">
+                                       <StackPane.margin>
+                                          <Insets right="10.0" />
+                                       </StackPane.margin>
+                                    </TextField>
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Customer" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ComboBox fx:id="customerComboBox" maxWidth="-Infinity" onAction="#customerComboBoxDrop" prefWidth="208.0">
+                                       <StackPane.margin>
+                                          <Insets right="10.0" />
+                                       </StackPane.margin>
+                                    </ComboBox>
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label text="Date" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <ComboBox fx:id="dateComboBox" maxWidth="-Infinity" onAction="#dateComboBoxDrop" prefWidth="208.0">
+                                       <StackPane.margin>
+                                          <Insets right="10.0" />
+                                       </StackPane.margin>
+                                    </ComboBox>
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <children>
+                                    <Label text="Time" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                 <children>
+                                    <Button fx:id="saveButton" maxWidth="-Infinity" mnemonicParsing="false" onAction="#saveAppointmentUpdate" prefWidth="64.0" style="-fx-background-color: #708090;" text="Save" textFill="GHOSTWHITE" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <children>
+                                    <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelAppointmentUpdate" style="-fx-background-color: #708090;" text="Cancel" textFill="GHOSTWHITE" />
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label text="Type" />
+                                 </children>
+                              </StackPane>
+                              <ComboBox fx:id="typeComboBox" maxWidth="-Infinity" onAction="#typeComboBoxDrop" prefWidth="208.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <ComboBox fx:id="startComboBox" maxWidth="-Infinity" onAction="#startComboBoxDrop" prefWidth="208.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
